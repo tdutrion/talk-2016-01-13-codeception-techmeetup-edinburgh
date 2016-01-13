@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+		<title>Acceptance testing in PHP with Codeception</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="Acceptance testing in PHP with Codeception for Edinburgh Techmeetup - January 2016">
+		<meta name="author" content="Thomas Dutrion">
 
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -37,346 +37,517 @@
 	<body>
 
 		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
+					<h2>Acceptance testing in PHP with</h2>
+					<h1>Codeception</h1>
+					<h3>Techmeetup Edinburgh January 2016</h3>
+					<div class="text-align:center;">
+						<img src="images/techmeetup.png" alt="Techmeetup logo" style="max-width:127px; max-height:127px;">
+						<img src="images/codeception.jpg" alt="Codeception logo" style="max-width:127px; max-height:127px;">
+					</div>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small>By <a href="https://onename.com/tdutrion">Thomas Dutrion</a> / <a href="https://twitter.com/tdutrion">@tdutrion</a> - 13/01/2016</small>
 					</p>
 				</section>
 
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
-
-				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+						<h2>About me</h2>
+						<ul>
+								<li>Founder & Developer / web architect at <a href="https://www.engineor.com">Engineor</a></li>
+								<li>Working with PHP since 2003</li>
+								<li>Doing my best to work properly!</li>
+						</ul>
+						<div style="margin-top: 1.2em">
+							<img src="images/tdutrion.jpg" alt="Photo Thomas Dutrion" style="max-height:200px">
 						</div>
 					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
+					<section>
+						<h2>Scotland PHP</h2>
+						<img src="images/elephpant.png" alt="Scotland PHP logo" style="max-height: 200px"><br>
+						<p>
+							Aberdeen (1st Wednesday)<br>
+							Edinburgh (3rd Tuesday)<br>
+							Glasgow (3rd Tuesday)<br>
+							Dundee (3rd Thursday)
+						</p>
+						<a href="https://www.scotlandphp.co.uk">https://www.scotlandphp.co.uk</a>
 					</section>
 				</section>
 
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
+				<section>
+					<section>
+						<h2>Modern PHP: industrialisation</h2>
+						<p>PHP is mature (object oriented, namespaces...).</p>
+						<p>PHP has a large community.</p>
+						<p>PHP has a large ecosystem.</p>
+						<h3>Why large corporation aren't using it more often?</h3>
+					</section>
+					<section>
+						<h2>Testability</h2>
+					</section>
+					<section>
+						<h2>What can we test?</h2>
+						<ul>
+							<li>Unit testing</li>
+							<li>Integration testing</li>
+							<li>Functional testing</li>
+							<li>Acceptance testing</li>
+							<li>Mutation testing</li>
+							<li>...</li>
+						</ul>
+					</section>
+					<section>
+						<h2>What can we charge for?</h2>
+						<ul>
+							<li>Unit testing (sometimes)</li>
+							<li>Integration testing (occasionnaly)</li>
+							<li>Functional testing (occasionnaly)</li>
+							<li>Acceptance testing (sometimes)</li>
+							<li>Mutation testing (rarely)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Unit testing</h2>
+						<ul>
+							<li>Small units of isolated code (SOLID)</li>
+							<li>Takes time to write and update</li>
+						</ul>
+						<p style="margin-top:1.2em">Perfect for critical processes in your application</p>
+					</section>
+					<section>
+						<h2>Integration testing</h2>
+						<ul>
+							<li>Test larger units of code together</li>
+							<li>Does not give specific details to find a bug</li>
+							<li>Less expensive (less tests)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Acceptance testing</h2>
+						<ul>
+							<li>High level testing (as a user)</li>
+							<li>Client point of view</li>
+							<li>Less code, easier to implement</li>
+							<li>Only test final result</li>
+						</ul>
+						<p style="margin-top:1.2em">Can also be used in business to prove the project completion</p>
+					</section>
 				</section>
 
 				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+					<section>
+						<h2>Codeception</h2>
+						<h3>One tool, multiple testing types</h3>
+					</section>
+					<section>
+						<h2>General introduction</h2>
+						<h3>History</h3>
+						<ul>
+							<li>Started in 2011</li>
+							<li>First stable January 2012</li>
+							<li>Currently 2.1.5</li>
+							<li>4677 commits yesterday night (4267 in October*)</li>
+							<li>322 contributors yesterday (295 in October*)</li>
+						</ul>
+						<p style="margin-top:1.3em; font-size: 0.9em;">*same talk in October last year for DundeePHP</p>
+					</section>
+					<section>
+						<h2>General introduction</h2>
+						<h3>Problem solved</h3>
+						<ul>
+							<li>Bridge between different testing types</li>
+							<li>No other languages required (for php developers)</li>
+							<li>Extensible</li>
+							<li>Covers all the major PHP framework</li>
+						</ul>
+					</section>
 				</section>
 
 				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
+					<section>
+						<h2>Let's get into it...</h2>
+					</section>
+					<section>
+						<h4>PHP 5.4 minimum (use at least 5.6 anyways!)</h4>
+						<img src="images/php-versions.png" alt="PHP Supported versions"><br>
+						<a href="https://secure.php.net/supported-versions.php">PHP supported versions</a>
+					</section>
+					<section>
+						<h2>You already know it!</h2>
+						<h4>Or not, but you should have a look at these tools</h4>
+						<p>Based on recommended and proven tools</p>
+						<ul>
+							<li><a href="https://phpunit.de/">PHPUnit</a></li>
+							<li><a href="https://github.com/symfony/BrowserKit">Symfony browserkit</a></li>
+							<li><a href="http://www.seleniumhq.org/">Selenium</a> / <a href="http://phantomjs.org/">PhantomJS</a> (optional)</li>
+							<li>...</li>
+						</ul>
+					</section>
+					<section>
+						<h2>You already know it!</h2>
+						<p>Test suites are written in PHP.</p>
+						<p>You can test websites created in any language (as you are only testing the result)</p>
+					</section>
 				</section>
 
 				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
+					<section>
+						<h2>Acceptance testing 101</h2>
+					</section>
+					<section>
+						<h2>Follow the quickstart!</h2>
+						<ol>
+							<li>Install codeception (prefer using composer, globally or in dev only)</li>
+							<li>Bootstrap (directories and files structure, basic configuration)</li>
+							<li>Generate acceptance testing</li>
+							<li>Write tests</li>
+							<li>And run!</li>
+						</ol>
+						<a href="http://codeception.com/quickstart">http://codeception.com/quickstart</a>
+					</section>
+					<section>
+						<h2>Install (with Composer)</h2>
+						<pre class="bash"><code>
+$ composer require "codeception/codeception:*"
+./composer.json has been created
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+  - Installing symfony/polyfill-mbstring (v1.0.1)
+    Loading from cache
+						</code></pre>
+						...
+						<pre class="bash"><code>
+  - Installing phpunit/phpunit (4.8.21)
+    Loading from cache
+
+  - Installing codeception/codeception (2.1.5)
+    Downloading: 100%
+
+Writing lock file
+Generating autoload files
+						</code></pre>
+					</section>
+					<section>
+						<h2>Directory content</h2>
+						<pre class="bash"><code>
+$ tree -I vendor
+.
+├── composer.json
+└── composer.lock
+						</code></pre>
+						<p>Option -I to remove the vendor folder from the display as it contains only third party libraries.</p>
+					</section>
+					<section>
+						<h2>Bootstrap</h2>
+						<pre class="bash"><code>
+$ php vendor/bin/codecept bootstrap
+Initializing Codeception in /presentations/2016-01-13-Codeception-Techmeetup-Edinburgh/demo
+
+File codeception.yml created       <- global configuration
+tests/unit created                 <- unit tests
+tests/unit.suite.yml written       <- unit tests suite configuration
+tests/functional created           <- functional tests
+tests/functional.suite.yml written <- functional tests suite configuration
+tests/acceptance created           <- acceptance tests
+tests/acceptance.suite.yml written <- acceptance tests suite configuration
+ ---
+tests/_bootstrap.php written <- global bootstrap file
+Building initial Tester classes
+Building Actor classes for suites: acceptance, functional, unit
+ -> AcceptanceTesterActions.php generated successfully. 0 methods added
+\AcceptanceTester includes modules: PhpBrowser, \Helper\Acceptance
+AcceptanceTester.php created.
+ -> FunctionalTesterActions.php generated successfully. 0 methods added
+\FunctionalTester includes modules: \Helper\Functional
+FunctionalTester.php created.
+ -> UnitTesterActions.php generated successfully. 0 methods added
+\UnitTester includes modules: Asserts, \Helper\Unit
+UnitTester.php created.
+
+Bootstrap is done. Check out /presentations/2016-01-13-Codeception-Techmeetup-Edinburgh/demo/tests directory
+						</code></pre>
+					</section>
+					<section>
+						<h2>Directory content</h2>
+						<pre class="bash"><code>$ tree -I vendor
+.
+├── codeception.yml
+├── composer.json
+├── composer.lock
+└── tests
+    ├── _bootstrap.php
+    ├── _data
+    │   └── dump.sql
+    ├── _envs
+    ├── _output
+    ├── _support
+    │   ├── AcceptanceTester.php
+    │   ├── FunctionalTester.php
+    │   ├── Helper
+    │   │   ├── Acceptance.php
+    │   │   ├── Functional.php
+    │   │   └── Unit.php
+    │   ├── UnitTester.php
+    │   └── _generated
+    │       ├── AcceptanceTesterActions.php
+    │       ├── FunctionalTesterActions.php
+    │       └── UnitTesterActions.php
+    ├── acceptance
+    │   └── _bootstrap.php
+    ├── acceptance.suite.yml
+    ├── functional
+    │   └── _bootstrap.php
+    ├── functional.suite.yml
+    ├── unit
+    │   └── _bootstrap.php
+    └── unit.suite.yml</code></pre>
+						<p>Option -I to remove the vendor folder from the display as it contains only third party libraries.</p>
+					</section>
+					<section>
+						<h2>Test generation</h2>
+						<pre class="bash"><code>
+$ vendor/bin/codecept generate:cept acceptance Welcome
+Test was created in /presentations/2016-01-13-Codeception-Techmeetup-Edinburgh/demo/tests/acceptance/WelcomeCept.php
+						</code></pre>
+
+						<p>Generates <code>tests/acceptance/WelcomeCept.php</code>:</p>
+						<pre class="php"><code>
+&lt;?php
+$I = new AcceptanceTester($scenario);
+$I-&gt;wantTo('perform actions and see result');
+						</code></pre>
+					</section>
+					<section>
+						<h2>Write tests</h2>
+						<pre class="php"><code>
+&lt;?php
+$I = new AcceptanceTester($scenario);
+$I-&gt;wantTo('ensure that Edinburgh is listed on the homepage');
+$I-&gt;amOnPage('/');
+$I-&gt;see('Edinburgh');
+						</code></pre>
+						<code>tests/acceptance/WelcomeCept.php</code>
+					</section>
+					<section>
+						<h2>Update configuration</h2>
+						<pre class="yaml"><code>
+# Codeception Test Suite Configuration
+#
+# Suite for acceptance tests.
+# Perform tests in browser using the WebDriver or PhpBrowser.
+# If you need both WebDriver and PHPBrowser tests - create a separate suite.
+
+class_name: AcceptanceTester
+modules:
+    enabled:
+        - PhpBrowser:
+            url: http://techmeetup.co.uk/
+        - \Helper\Acceptance
+						</code></pre>
+						<code>tests/acceptance.suite.yml</code>
+					</section>
+					<section>
+						<h2>Basic example results (pass)</h2>
+						<pre class="bash"><code>$ vendor/bin/codecept run
+Codeception PHP Testing Framework v2.1.5
+Powered by PHPUnit 4.8.21 by Sebastian Bergmann and contributors.
+
+Acceptance Tests (1) --------------------------------------------
+Ensure that frontpage works (WelcomeCept)                     Ok
+-----------------------------------------------------------------
+
+Functional Tests (0) --------------------------------------------
+
+Unit Tests (0) --------------------------------------------------
+
+Time: 630 ms, Memory: 10.00Mb
+
+OK (1 test, 1 assertion)</code></pre>
+					</section>
+					<section>
+						<h2>Add test</h2>
+						<pre class="php"><code>
+&lt;?php
+$I = new AcceptanceTester($scenario);
+$I-&gt;wantTo('ensure that Edinburgh is listed on the homepage');
+$I-&gt;amOnPage('/');
+$I-&gt;see('Edinburgh');
+$I-&gt;see('This does not appear on the page');
+						</code></pre>
+						<code>tests/acceptance/WelcomeCept.php</code>
+					</section>
+					<section>
+						<h2>Basic example results (fail)</h2>
+						<pre class="bash"><code>$ vendor/bin/codecept run
+Codeception PHP Testing Framework v2.1.5
+Powered by PHPUnit 4.8.21 by Sebastian Bergmann and contributors.
+
+Acceptance Tests (1) ---------------------------------------------
+Ensure that frontpage works (WelcomeCept)                    Fail
+------------------------------------------------------------------
+
+Functional Tests (0) ---------------------------------------------
+
+Unit Tests (0) ---------------------------------------------------
+
+Time: 605 ms, Memory: 10.00Mb</code></pre>
+					</section>
+					<section>
+						<h2>Basic example results (fail)</h2>
+						<pre class="bash"><code>There was 1 failure:
+---------
+1) Failed to ensure that frontpage works in WelcomeCept (tests/acceptance/WelcomeCept.php)
+
+Step  I see "This does not appear on the page"
+Fail  Failed asserting that   /
+-->
+  TechMeetup - Home
+        Tech Meetup
+          About
+          Videos
+          Blog
+          Calendar
+     TechMeetup is a monthly excuse for developers and the tech communit
+[Content too long to display. See complete response in '_output' directory]
+--> contains "this does not appear on the page".</code></pre>
+					</section>
+					<section>
+						<h2>Basic example results (fail)</h2>
+						<pre class="bash"><code>Scenario Steps:
+
+ 3. $I->see("This does not appear on the page") at tests/acceptance/WelcomeCept.php:6
+ 2. $I->see("Edinburgh") at tests/acceptance/WelcomeCept.php:5
+ 1. $I->amOnPage("/") at tests/acceptance/WelcomeCept.php:4
+
+
+FAILURES!
+Tests: 1, Assertions: 2, Failures: 1.</code></pre>
+					</section>
+					<section>
+						<h2>Change tests</h2>
+						<pre class="php"><code>
+&lt;?php
+$I = new AcceptanceTester($scenario);
+$I-&gt;wantTo('ensure that Edinburgh is listed on the homepage');
+$I-&gt;amOnPage('/');
+$I-&gt;see('Edinburgh');
+$I-&gt;click('Edinburgh');
+$I-&gt;amOnPage('/edinburgh.html');
+$I-&gt;see('2nd Wed of month');
+						</code></pre>
+						<code>tests/acceptance/WelcomeCept.php</code>
+					</section>
+					<section>
+						<h2>Results</h2>
+						<pre class="php"><code>$ vendor/bin/codecept run
+Codeception PHP Testing Framework v2.1.5
+Powered by PHPUnit 4.8.21 by Sebastian Bergmann and contributors.
+
+Acceptance Tests (1) --------------------------------------------
+Ensure that frontpage works (WelcomeCept)                     Ok
+-----------------------------------------------------------------
+
+Functional Tests (0) --------------------------------------------
+
+Unit Tests (0) --------------------------------------------------
+
+Time: 834 ms, Memory: 10.00Mb
+
+OK (1 test, 2 assertions)</code></pre>
+					</section>
 				</section>
 
 				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
+					<section>
+						<h2>Modern frontend issues</h2>
+					</section>
+					<section>
+						<h2>Problem:</h2>
+						<ul>
+							<li>Since 2005, AJAX is everywhere (XmlHttpRequest)</li>
+							<li>New architecture: MVVM javascript in front, PHP/node… in back</li>
+						</ul>
+						<p>Testing problem: PHPBrowser / Curl can not read javascript modifications.</p>
+					</section>
+					<section>
+						<h2>Solution 1:</h2>
+						<h3>Use selenium driver and delays</h3>
+						<p>Simple configuration (see the documentation).</p>
+						<p>Looks good when showing off to your client!</p>
+						<pre class="bash"><code>composer require --dev "netwing/selenium-server-standalone:^2.46"</code></pre>
+					</section>
+					<section>
+						<h2>Solution 1:</h2>
+						<h3>Use selenium driver and delays</h3>
+						<pre class="bash"><code># Codeception Test Suite Configuration
+#
+# Suite for acceptance tests.
+# Perform tests in browser using the WebDriver or PhpBrowser.
+# If you need both WebDriver and PHPBrowser tests - create a separate suite.
+
+class_name: AcceptanceTester
+modules:
+    enabled:
+        - WebDriver
+        - \Helper\Acceptance
+    config:
+        WebDriver:
+            url: 'https://phpmentoring.org'
+            browser: 'firefox'
+            window_size: 1024x768</code></pre>
+					</section>
+					<section>
+						<h2>Solution 1:</h2>
+						<h3>Use selenium driver and delays</h3>
+						<pre class="bash"><code>&lt;?php
+$I = new AcceptanceTester($scenario);
+$I-&gt;wantTo('ensure that tdutrion is displayed as a mentor');
+$I-&gt;amOnPage('/mentors');
+$I-&gt;wait(1);
+$I-&gt;see('Thomas Dutrion');</code></pre>
+					</section>
+					<section>
+						<h2>Solution 1:</h2>
+						<h3>Use selenium driver and delays</h3>
+						<pre class="bash"><code>java -jar vendor/bin/selenium-server-standalone-2.46.0.jar</code></pre>
+						<pre class="bash"><code>vendor/bin/codecept run</code></pre>
+					</section>
+					<section data-background-video="videos/selenium.mp4"></section>
+					<section>
+						<h2>Solution 2:</h2>
+						<h3>Use something more appropriate?</h3>
+						<p>Google recommends <a href="https://karma-runner.github.io/0.13/index.html">Karma</a>, but other exist (<a href="http://nightwatchjs.org/">Nightwatch.js</a>, <a hef="http://jasmine.github.io/">Jasmine</a>).</p>
+					</section>
+					<section>
+						<h2>Problem 2:</h2>
+						<p>I can not use Java and Firefox on my continuous integration server!</p>
+						<p>(Who would do that?)</p>
+					</section>
+					<section>
+						<h2>Solution:</h2>
+						<h3>Use a headless browser (PhantomJS)</h3>
+						<p>Just a configuration again, try at home!</p>
+					</section>
 				</section>
 
 				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
-
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
+					<h2>Questions?</h2>
 				</section>
 
 				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
+					<h2>Thanks for having me!</h2>
+					<p>Special thanks to / reading recommendation:</p>
+					<ul>
+						<li style="font-size:.8em">Jeremy Coates (<a href="https://twitter.com/phpcodemonkey">@phpcodemonkey</a>) for <a href="">Testing with codeception</a></li>
+						<li style="font-size:.8em">PHPNW (<a href="https://twitter.com/phpnw">@phpnw</a>), great PHP group that made me discover Codeception</li>
+						<li style="font-size:.8em">All of you for your patience and supporting me!</li>
+						<li style="font-size:.8em">Techmeetup (<a href="https://twitter.com/techmeetup">@techmeetup</a>) to let me talk here</li>
+					</ul>
+					<p style="margin-top:1.2em;font-size:.8em">Please rate and comment this talk on SlideShare: <a href="http://goo.gl/068L56">http://goo.gl/068L56</a></p>
 				</section>
-
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
@@ -387,7 +558,7 @@ Reveal.addEventListener( 'customevent', function() {
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
-				controls: true,
+				controls: false,
 				progress: true,
 				history: true,
 				center: true,
